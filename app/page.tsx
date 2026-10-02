@@ -20,6 +20,10 @@ export default function Page() {
 
   return (
     <main className="cart-page">
+      <header className="static-cart-header" aria-label="Walmart navigation">
+        <div className="static-search-bar"><span className="spark">✳</span><span>Search everything at Walmart online and in store</span><span className="search-icon">⌕</span></div>
+        <nav><span>Departments⌄</span><span>Services⌄</span></nav>
+      </header>
       <div className="cart-image-wrap" aria-label="Walmart cart preview">
         <img src={screenshotUrl} alt="Walmart cart with Halloween products" className="cart-image" />
       </div>
@@ -29,9 +33,6 @@ export default function Page() {
           <button className="checkout-button" type="button">Continue to checkout</button>
           <p className="signin-copy">For the best shopping experience, sign in</p>
           <div className="summary-divider" />
-          <div className="summary-row strong"><span>Subtotal (18 items)</span><span>${subtotal.toFixed(2)}</span></div>
-          <div className="summary-row"><span>Shipping</span><span className="free">Free</span></div>
-          <div className="summary-row"><span>Taxes</span><span>Calculated at checkout</span></div>
           <div className="promo-box">
             <div className="promo-title">Add promo code</div>
             <form onSubmit={applyPromo} className="promo-form">
@@ -49,7 +50,10 @@ export default function Page() {
             </form>
             {applied && <p className="promo-success">Discount applied</p>}
           </div>
+          <div className="summary-row strong"><span>Subtotal (18 items)</span><span>${subtotal.toFixed(2)}</span></div>
+          <div className="summary-row"><span>Shipping</span><span className="free">Free</span></div>
           {applied && <div className="discount-row"><span>Discount</span><span>-${discount.toFixed(2)}</span></div>}
+          <div className="summary-row"><span>Taxes</span><span>Calculated at checkout</span></div>
           <div className="total-row"><span>Estimated total</span><span>${total.toFixed(2)}</span></div>
           <div className="later-card">
             <div><strong>OnePay Later</strong><small>Financing options available</small></div>
