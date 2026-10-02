@@ -16,7 +16,7 @@ button, input { font: inherit; }
   position: relative;
 }
 .cart-image-wrap {
-  width: calc(100% - 320px);
+  width: calc(100% - 340px);
   min-height: 100vh;
   overflow: hidden;
   background: #fff;
@@ -29,7 +29,7 @@ button, input { font: inherit; }
   top: 0;
   right: 0;
   bottom: 0;
-  width: 35%;
+  width: 7%;
   background: #fff;
 }
 .cart-image {
@@ -44,9 +44,9 @@ button, input { font: inherit; }
 .checkout-column {
   position: fixed;
   z-index: 2;
-  top: 108px;
-  right: 28px;
-  width: 290px;
+  top: 164px;
+  right: 55px;
+  width: 310px;
 }
 .checkout-card {
   border: 1px solid #d7d7d7;

@@ -4,7 +4,7 @@ import { useState } from 'react'
 import type { FormEvent } from 'react'
 
 const screenshotUrl =
-  'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/screencapture-walmart-cart-2026-10-02-21_44_46-3iPBU1rLYKQAjZhaqs4OXpXmuPdA41.png'
+  'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202026-10-02%20at%2021.57.57-XgwCXIhERh1boxjg7em0T51B43Xl7c.png'
 
 export default function Page() {
   const [promo, setPromo] = useState('')
