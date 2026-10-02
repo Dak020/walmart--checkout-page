@@ -1,6 +1,7 @@
 'use client'
 
-import { FormEvent, useState } from 'react'
+import { useState } from 'react'
+import type { FormEvent } from 'react'
 
 const screenshotUrl =
   'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/screencapture-walmart-cart-2026-10-02-21_44_46-3iPBU1rLYKQAjZhaqs4OXpXmuPdA41.png'
@@ -42,6 +43,7 @@ export default function Page() {
                 placeholder="Enter code"
                 autoComplete="off"
                 maxLength={20}
+                suppressHydrationWarning
               />
               <button type="submit">Apply</button>
             </form>
