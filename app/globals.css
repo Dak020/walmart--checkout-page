@@ -45,21 +45,35 @@ button, input { font: inherit; }
 .cart-image-wrap {
   width: 100%;
   min-height: 100vh;
-  overflow: visible;
+  overflow: hidden;
+  background: #fff;
+  position: relative;
+}
+.cart-image-wrap::after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: 116px;
+  right: 0;
+  bottom: 0;
+  width: 33%;
   background: #fff;
 }
 .cart-image {
   display: block;
+  position: relative;
+  z-index: 0;
   width: 100%;
   max-width: none;
   height: auto;
   min-height: 100vh;
   object-fit: contain;
   object-position: left top;
+  margin-top: -116px;
 }
 .checkout-column {
   position: fixed;
-  z-index: 2;
+  z-index: 4;
   top: 164px;
   right: 55px;
   width: 310px;
