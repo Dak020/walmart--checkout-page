@@ -19,20 +19,45 @@ button, input { font: inherit; }
   position: fixed;
   inset: 0 0 auto;
   z-index: 10;
-  height: auto;
+  height: var(--header-height);
   line-height: 0;
-  background: #0866dc;
+  background: #e8f1ff;
   overflow: hidden;
   isolation: isolate;
   transform: translateZ(0);
 }
+.header-image-crop {
+  height: 66%;
+  overflow: hidden;
+}
 .static-cart-header img {
   display: block;
   width: 100%;
-  height: var(--header-height);
+  height: 152%;
   object-fit: fill;
-  object-position: center;
+  object-position: top center;
 }
+.reference-tabs {
+  height: 34%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 36px;
+  background: #e8f1ff;
+}
+.reference-tabs span {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  height: 70%;
+  padding: 0 18px;
+  border-radius: 24px;
+  background: #fff;
+  color: #15386d;
+  font-size: 15px;
+  font-weight: 700;
+}
+.reference-tabs b { font-size: 20px; font-weight: 400; }
 .cart-image-wrap { padding-top: var(--header-height); }
 .cart-image-wrap {
   width: 100%;
@@ -68,7 +93,7 @@ button, input { font: inherit; }
   z-index: 9;
   top: calc(var(--header-height) + clamp(18px, 4vh, 36px));
   right: clamp(18px, 3vw, 56px);
-  width: min(500px, calc(100vw - 40px));
+  width: min(520px, 42vw);
   max-height: calc(100vh - var(--header-height) - 24px);
   overflow-y: auto;
   scrollbar-width: thin;
