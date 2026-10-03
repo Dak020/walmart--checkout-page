@@ -4,7 +4,7 @@
 
 @custom-variant dark (&:is(.dark *));
 
-:root { color-scheme: light; --header-height: clamp(116px, 10.7vw, 148px); }
+:root { color-scheme: light; --header-height: 9vw; }
 * { box-sizing: border-box; }
 html, body { margin: 0; min-height: 100%; background: #0866dc; overscroll-behavior-y: none; }
 body { font-family: Arial, Helvetica, sans-serif; color: #171717; overflow-x: hidden; }
@@ -27,18 +27,17 @@ button, input { font: inherit; }
   transform: translateZ(0);
 }
 .header-image-crop {
-  height: 66%;
+  height: var(--header-height);
   overflow: hidden;
 }
 .static-cart-header img {
   display: block;
   width: 100%;
-  height: 152%;
+  height: var(--header-height);
   object-fit: fill;
-  object-position: top center;
 }
 .reference-tabs {
-  height: 34%;
+  height: 48px;
   display: flex;
   align-items: center;
   gap: 12px;
@@ -93,7 +92,7 @@ button, input { font: inherit; }
   z-index: 9;
   top: calc(var(--header-height) + clamp(18px, 4vh, 36px));
   right: clamp(18px, 3vw, 56px);
-  width: min(520px, 42vw);
+  width: min(520px, calc(100vw - 560px));
   max-height: calc(100vh - var(--header-height) - 24px);
   overflow-y: auto;
   scrollbar-width: thin;
@@ -102,7 +101,7 @@ button, input { font: inherit; }
   border: 1px solid #d7d7d7;
   border-radius: 8px;
   background: #fff;
-  padding: 18px;
+  padding: 24px;
   box-shadow: 0 2px 7px rgba(0,0,0,.08);
 }
 .checkout-button {
@@ -111,7 +110,7 @@ button, input { font: inherit; }
   border-radius: 999px;
   background: #0866dc;
   color: #fff;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 700;
   padding: 12px 14px;
   cursor: pointer;

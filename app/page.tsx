@@ -27,10 +27,7 @@ export default function Page() {
             alt="Walmart search and navigation header"
           />
         </div>
-        <nav className="reference-tabs" aria-label="Store categories">
-          <span>Departments <b>⌄</b></span>
-          <span>Services <b>⌄</b></span>
-        </nav>
+
       </header>
       <div className="cart-image-wrap" aria-label="Walmart cart preview">
         <img src={screenshotUrl} alt="Walmart cart with Halloween products" className="cart-image" />
