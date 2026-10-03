@@ -91,8 +91,8 @@ button, input { font: inherit; }
   position: fixed;
   z-index: 9;
   top: calc(var(--header-height) + clamp(18px, 4vh, 36px));
-  right: clamp(18px, 3vw, 56px);
-  width: min(520px, calc(100vw - 560px));
+  right: 28px;
+  width: 520px;
   max-height: calc(100vh - var(--header-height) - 24px);
   overflow-y: auto;
   scrollbar-width: thin;
@@ -115,18 +115,18 @@ button, input { font: inherit; }
   padding: 12px 14px;
   cursor: pointer;
 }
-.signin-copy { margin: 12px 0; text-align: center; font-size: 10px; color: #333; }
+.signin-copy { margin: 16px 0; text-align: center; font-size: 14px; color: #333; }
 .summary-divider { border-top: 1px solid #ececec; margin: 0 -12px 12px; }
-.summary-row, .total-row, .discount-row { display:flex; justify-content:space-between; gap: 12px; font-size: 11px; margin: 11px 0; }
+.summary-row, .total-row, .discount-row { display:flex; justify-content:space-between; gap: 12px; font-size: 15px; margin: 16px 0; }
 .summary-row span:last-child, .total-row span:last-child, .discount-row span:last-child { text-align: right; }
 .summary-row.strong { font-weight: 700; }
 .free, .discount-row span:last-child { color: #218a22; }
 .promo-box { border: 1px solid #c8c8c8; border-radius: 7px; padding: 10px; margin: 14px 0 12px; }
-.promo-title { font-size: 12px; font-weight: 700; margin-bottom: 8px; }
-.promo-form { display:flex; gap: 6px; }
-.promo-form input { min-width: 0; flex: 1; border: 1px solid #a7a7a7; border-radius: 4px; padding: 8px; font-size: 11px; text-transform: uppercase; }
+.promo-title { font-size: 16px; font-weight: 700; margin-bottom: 12px; }
+.promo-form { display:flex; gap: 10px; }
+.promo-form input { min-width: 0; flex: 1; border: 1px solid #a7a7a7; border-radius: 4px; padding: 12px; font-size: 15px; text-transform: uppercase; }
 .promo-form input:disabled { color: #237b26; opacity: 1; font-weight: 700; }
-.promo-form button { border: 1px solid #1a1a1a; border-radius: 4px; padding: 7px 9px; background: #fff; font-size: 11px; font-weight: 700; cursor: pointer; }
+.promo-form button { border: 1px solid #1a1a1a; border-radius: 6px; padding: 10px 16px; background: #fff; font-size: 15px; font-weight: 700; cursor: pointer; }
 .promo-success { color: #237b26; font-size: 10px; margin: 8px 0 0; font-weight: 700; }
 .discount-row { color: #237b26; font-weight: 700; }
 .total-row { border-top: 1px solid #e5e5e5; padding-top: 14px; font-size: 14px; font-weight: 700; margin-top: 14px; }
