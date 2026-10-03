@@ -35,26 +35,23 @@ export default function Page() {
           <button className="checkout-button" type="button">Continue to checkout</button>
           <p className="signin-copy">For the best shopping experience, sign in</p>
           <div className="summary-divider" />
-          {applied ? (
-            <p className="promo-success">Promo Code Added</p>
-          ) : (
-            <div className="promo-box">
-              <div className="promo-title">Add promo code</div>
-              <form onSubmit={applyPromo} className="promo-form">
-                <label htmlFor="promo" className="sr-only">Promo code</label>
-                <input
-                  id="promo"
-                  value={promo}
-                  onChange={(event) => setPromo(event.target.value.toUpperCase())}
-                  placeholder="ENTER CODE"
-                  autoComplete="off"
-                  maxLength={20}
-                  suppressHydrationWarning
-                />
-                <button type="submit">Apply</button>
-              </form>
-            </div>
-          )}
+          <div className="promo-box">
+            <div className="promo-title">Add promo code</div>
+            <form onSubmit={applyPromo} className="promo-form">
+              <label htmlFor="promo" className="sr-only">Promo code</label>
+              <input
+                id="promo"
+                value={applied ? "Promo Code Added" : promo}
+                onChange={(event) => setPromo(event.target.value.toUpperCase())}
+                placeholder="ENTER CODE"
+                autoComplete="off"
+                maxLength={20}
+                disabled={applied}
+                suppressHydrationWarning
+              />
+              {!applied && <button type="submit">Apply</button>}
+            </form>
+          </div>
           <div className="summary-row strong"><span>Subtotal (18 items)</span><span>${subtotal.toFixed(2)}</span></div>
           <div className="summary-row"><span>Shipping</span><span className="free">Free</span></div>
           {applied && <div className="discount-row"><span>Discount</span><span>-${discount.toFixed(2)}</span></div>}
