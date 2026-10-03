@@ -21,10 +21,10 @@ export default function Page() {
   return (
     <main className="cart-page">
       <header className="static-cart-header" aria-label="Walmart navigation">
-        <div className="static-search-bar"><span className="spark">✳</span><span>Search everything at Walmart online and in store</span><span className="search-icon">⌕</span></div>
-        <nav aria-label="Store categories">
-          <span>Departments⌄</span><span>Services⌄</span><span>Rollbacks & More</span><span>Halloween</span><span>Get it Fast</span><span>Pharmacy</span><span>New Arrivals</span><span>Toy Shop</span><span>Game Day</span><span>Meals Made Easy</span><span>Walmart+</span><span>More⌄</span>
-        </nav>
+        <img
+          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202026-10-03%20at%2001.39.12-poGWJhnBxX8ez3dolWZYw0fnHqCeQ9.png"
+          alt="Walmart search and navigation header"
+        />
       </header>
       <div className="cart-image-wrap" aria-label="Walmart cart preview">
         <img src={screenshotUrl} alt="Walmart cart with Halloween products" className="cart-image" />
