@@ -22,7 +22,9 @@ export default function Page() {
     <main className="cart-page">
       <header className="static-cart-header" aria-label="Walmart navigation">
         <div className="static-search-bar"><span className="spark">✳</span><span>Search everything at Walmart online and in store</span><span className="search-icon">⌕</span></div>
-        <nav><span>Departments⌄</span><span>Services⌄</span></nav>
+        <nav aria-label="Store categories">
+          <span>Departments⌄</span><span>Services⌄</span><span>Rollbacks & More</span><span>Halloween</span><span>Get it Fast</span><span>Pharmacy</span><span>New Arrivals</span><span>Toy Shop</span><span>Game Day</span><span>Meals Made Easy</span><span>Walmart+</span><span>More⌄</span>
+        </nav>
       </header>
       <div className="cart-image-wrap" aria-label="Walmart cart preview">
         <img src={screenshotUrl} alt="Walmart cart with Halloween products" className="cart-image" />
@@ -41,7 +43,7 @@ export default function Page() {
                 id="promo"
                 value={promo}
                 onChange={(event) => setPromo(event.target.value.toUpperCase())}
-                placeholder="Enter code"
+                placeholder="ENTER CODE"
                 autoComplete="off"
                 maxLength={20}
                 suppressHydrationWarning

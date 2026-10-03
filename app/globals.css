@@ -18,7 +18,7 @@ button, input { font: inherit; }
 .static-cart-header {
   position: fixed;
   inset: 0 0 auto;
-  z-index: 5;
+  z-index: 10;
   height: 116px;
   background: #0866dc;
   color: #fff;
@@ -39,8 +39,9 @@ button, input { font: inherit; }
 }
 .spark { color: #ffc220; font-size: 28px; }
 .search-icon { margin-left: auto; font-size: 28px; }
-.static-cart-header nav { height: 36px; background: #e8f1ff; color: #15386d; margin: 10px -34px 0; padding: 5px 34px; display: flex; gap: 12px; }
-.static-cart-header nav span { background: #fff; border-radius: 18px; padding: 6px 16px; font-size: 13px; font-weight: 700; }
+.static-cart-header nav { height: 36px; background: #e8f1ff; color: #15386d; margin: 10px -34px 0; padding: 5px 34px; display: flex; gap: 9px; align-items: center; overflow: hidden; white-space: nowrap; }
+.static-cart-header nav span { flex: 0 0 auto; background: #fff; border-radius: 18px; padding: 6px 13px; font-size: 12px; font-weight: 700; }
+.static-cart-header nav span:nth-child(n+3) { font-weight: 400; }
 .cart-image-wrap { padding-top: 116px; }
 .cart-image-wrap {
   width: 100%;
@@ -73,7 +74,7 @@ button, input { font: inherit; }
 }
 .checkout-column {
   position: fixed;
-  z-index: 4;
+  z-index: 9;
   top: 164px;
   right: 55px;
   width: 310px;
