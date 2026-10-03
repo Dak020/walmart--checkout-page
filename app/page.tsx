@@ -50,7 +50,7 @@ export default function Page() {
               />
               <button type="submit">Apply</button>
             </form>
-            {applied && <p className="promo-success">Discount applied</p>}
+            {applied && <p className="promo-success">Promo code added</p>}
           </div>
           <div className="summary-row strong"><span>Subtotal (18 items)</span><span>${subtotal.toFixed(2)}</span></div>
           <div className="summary-row"><span>Shipping</span><span className="free">Free</span></div>
