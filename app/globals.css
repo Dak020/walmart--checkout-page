@@ -6,8 +6,8 @@
 
 :root { color-scheme: light; }
 * { box-sizing: border-box; }
-html, body { margin: 0; min-height: 100%; background: #fff; }
-body { font-family: Arial, Helvetica, sans-serif; color: #171717; }
+html, body { margin: 0; min-height: 100%; background: #0866dc; overscroll-behavior-y: none; }
+body { font-family: Arial, Helvetica, sans-serif; color: #171717; overflow-x: hidden; }
 button, input { font: inherit; }
 
 .cart-page {
@@ -22,6 +22,9 @@ button, input { font: inherit; }
   height: auto;
   line-height: 0;
   background: #0866dc;
+  overflow: hidden;
+  isolation: isolate;
+  transform: translateZ(0);
 }
 .static-cart-header img {
   display: block;
@@ -61,9 +64,12 @@ button, input { font: inherit; }
 .checkout-column {
   position: fixed;
   z-index: 9;
-  top: 164px;
-  right: 55px;
-  width: 310px;
+  top: clamp(138px, 15vh, 190px);
+  right: clamp(18px, 4vw, 72px);
+  width: clamp(340px, 22vw, 430px);
+  max-height: calc(100vh - clamp(154px, 17vh, 210px));
+  overflow-y: auto;
+  scrollbar-width: thin;
 }
 .checkout-card {
   border: 1px solid #d7d7d7;
