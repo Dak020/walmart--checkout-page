@@ -4,7 +4,7 @@
 
 @custom-variant dark (&:is(.dark *));
 
-:root { color-scheme: light; --header-height: clamp(94px, 9.03vw, 132px); }
+:root { color-scheme: light; --header-height: clamp(116px, 10.7vw, 148px); }
 * { box-sizing: border-box; }
 html, body { margin: 0; min-height: 100%; background: #0866dc; overscroll-behavior-y: none; }
 body { font-family: Arial, Helvetica, sans-serif; color: #171717; overflow-x: hidden; }
@@ -29,7 +29,9 @@ button, input { font: inherit; }
 .static-cart-header img {
   display: block;
   width: 100%;
-  height: auto;
+  height: var(--header-height);
+  object-fit: fill;
+  object-position: center;
 }
 .cart-image-wrap { padding-top: var(--header-height); }
 .cart-image-wrap {
@@ -59,14 +61,14 @@ button, input { font: inherit; }
   min-height: 100vh;
   object-fit: contain;
   object-position: left top;
-  margin-top: calc(var(--header-height) * -1 - 28px);
+  margin-top: calc(var(--header-height) * -1 - 2px);
 }
 .checkout-column {
   position: fixed;
   z-index: 9;
   top: calc(var(--header-height) + clamp(18px, 4vh, 36px));
   right: clamp(18px, 3vw, 56px);
-  width: clamp(430px, 33vw, 560px);
+  width: min(500px, calc(100vw - 40px));
   max-height: calc(100vh - var(--header-height) - 24px);
   overflow-y: auto;
   scrollbar-width: thin;
