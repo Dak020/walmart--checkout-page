@@ -59,15 +59,15 @@ button, input { font: inherit; }
   min-height: 100vh;
   object-fit: contain;
   object-position: left top;
-  margin-top: calc(var(--header-height) * -1 - 14px);
+  margin-top: calc(var(--header-height) * -1 - 28px);
 }
 .checkout-column {
   position: fixed;
   z-index: 9;
   top: calc(var(--header-height) + clamp(18px, 4vh, 36px));
   right: clamp(18px, 3vw, 56px);
-  width: clamp(360px, 30vw, 520px);
-  max-height: calc(100vh - clamp(154px, 17vh, 210px));
+  width: clamp(430px, 33vw, 560px);
+  max-height: calc(100vh - var(--header-height) - 24px);
   overflow-y: auto;
   scrollbar-width: thin;
 }
